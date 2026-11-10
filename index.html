@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Constructor de Landings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Panel de Control / Personalización -->
+    <aside class="sidebar">
+        <h2>Personalizador</h2>
+        
+        <div class="control-group">
+            <label for="primaryColor">Color Primario:</label>
+            <input type="color" id="primaryColor" value="#3b43b5">
+        </div>
+
+        <div class="control-group">
+            <label for="borderRadius">Radio de Bordes:</label>
+            <select id="borderRadius">
+                <option value="4px">Sutil (4px)</option>
+                <option value="12px" selected>Moderno (12px)</option>
+                <option value="9999px">Pastilla (Redondo)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="brandTitle">Texto del Título Principal:</label>
+            <input type="text" id="brandTitle" value="Impulsa tu negocio digital hoy">
+        </div>
+    </aside>
+
+    <!-- Lienzo / Vista Previa de la Landing -->
+    <main class="preview-canvas">
+        <section class="hero-card">
+            <h1 id="previewTitle">Impulsa tu negocio digital hoy</h1>
+            <p>Diseña, personaliza y convierte con una estructura optimizada para agencias y creadores.</p>
+            <button class="btn-primary">Empezar Ahora</button>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

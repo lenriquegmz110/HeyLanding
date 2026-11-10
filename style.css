@@ -1,0 +1,109 @@
+:root {
+  --color-primary: #3b43b5;
+  --color-primary-hover: #2f3591;
+  --radius-box: 12px;
+  --bg-app: #0f1117;
+  --bg-sidebar: #161922;
+  --text-main: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Panel lateral */
+.sidebar {
+  width: 320px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.control-group label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.control-group input[type="text"],
+.control-group select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #0f1117;
+  color: #fff;
+}
+
+/* Lienzo de previsualización */
+.preview-canvas {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at center, #1a1d26 0%, #0f1117 100%);
+}
+
+.hero-card {
+  background: #1a1d26;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: var(--radius-box);
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-card h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.hero-card p {
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+/* Componentes dinámicos que usan las variables */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-box);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  align-self: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
