@@ -11,7 +11,9 @@
     <!-- Panel de Control / Personalización -->
     <aside class="sidebar">
         <h2>Personalizador</h2>
-        
+
+        <h3>Tema</h3>
+
         <div class="control-group">
             <label for="primaryColor">Color Primario:</label>
             <input type="color" id="primaryColor" value="#3b43b5">
@@ -26,21 +28,23 @@
             </select>
         </div>
 
-        <div class="control-group">
-            <label for="brandTitle">Texto del Título Principal:</label>
-            <input type="text" id="brandTitle" value="Impulsa tu negocio digital hoy">
+        <h3>Secciones</h3>
+
+        <div class="add-row">
+            <select id="newSectionType" aria-label="Tipo de sección a agregar"></select>
+            <button type="button" id="addSectionBtn" class="btn-small">+ Agregar</button>
         </div>
 
-        <button type="button" id="resetBtn" class="btn-secondary">Restablecer valores</button>
+        <div id="sectionList" class="section-list"></div>
+
+        <p id="saveStatus" class="save-status" role="status"></p>
+
+        <button type="button" id="resetBtn" class="btn-secondary">Restablecer todo</button>
     </aside>
 
     <!-- Lienzo / Vista Previa de la Landing -->
     <main class="preview-canvas">
-        <section class="hero-card">
-            <h1 id="previewTitle">Impulsa tu negocio digital hoy</h1>
-            <p>Diseña, personaliza y convierte con una estructura optimizada para agencias y creadores.</p>
-            <button class="btn-primary">Empezar Ahora</button>
-        </section>
+        <div id="preview" class="page"></div>
     </main>
 
     <script src="app.js"></script>
