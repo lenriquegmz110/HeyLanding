@@ -1,6 +1,7 @@
 :root {
   --color-primary: #3b43b5;
-  --color-primary-hover: #2f3591;
+  --color-primary-text: #ffffff;
+  --color-primary-hover: color-mix(in srgb, var(--color-primary), black 20%);
   --radius-box: 12px;
   --bg-app: #0f1117;
   --bg-sidebar: #161922;
@@ -94,7 +95,7 @@ body {
 /* Componentes dinámicos que usan las variables */
 .btn-primary {
   background-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-primary-text);
   padding: 0.875rem 2rem;
   border-radius: var(--radius-box);
   border: none;
@@ -106,4 +107,29 @@ body {
 
 .btn-primary:hover {
   background-color: var(--color-primary-hover);
+}
+
+/* Accesibilidad: foco visible */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.control-group input:focus-visible,
+.control-group select:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Botón secundario del panel */
+.btn-secondary {
+  margin-top: auto;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
